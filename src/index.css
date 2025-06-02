@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Oswald:wght@500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    overflow-y: scroll;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bebas Neue', 'Oswald', sans-serif;
+    letter-spacing: 0.02em;
+  }
+
+  :root {
+    --color-bg-primary: #FFFFFF;
+    --color-bg-secondary: #F3F4F6;
+    --color-bg-accent: #60A5FA;
+    
+    --color-text-primary: #1F2937;
+    --color-text-secondary: #4B5563;
+    --color-text-accent: #2563EB;
+    
+    --color-success: #10B981;
+    --color-warning: #F59E0B;
+    --color-error: #EF4444;
+    
+    --color-border: #E5E7EB;
+    
+    --shadow-color: 220 3% 15%;
+    
+    --nav-text: #111827;
+    --nav-text-hover: #4C1D95;
+
+    --nav-bg: rgba(243, 244, 246, 0.2);
+    --nav-bg-active: rgba(243, 244, 246, 0.5);
+    --nav-bg-hover: rgba(243, 244, 246, 0.3);
+    --nav-border: transparent;
+    --nav-border-active: rgba(147, 51, 234, 0.6);
+    --nav-border-hover: rgba(147, 51, 234, 0.8);
+    --nav-shadow: rgba(147, 51, 234, 0.2);
+    --nav-shadow-hover: rgba(147, 51, 234, 0.3);
+  }
+
+  :root.dark {
+    --color-bg-primary: #1A1A1A;
+    --color-bg-secondary: #262626;
+    --color-bg-accent: #3B82F6;
+    
+    --color-text-primary: #F9FAFB;
+    --color-text-secondary: #D1D5DB;
+    --color-text-accent: #60A5FA;
+    
+    --color-success: #059669;
+    --color-warning: #D97706;
+    --color-error: #DC2626;
+    
+    --color-border: #374151;
+    
+    --shadow-color: 220 40% 2%;
+    
+    --nav-text: #E9D5FF;
+    --nav-text-hover: #F3E8FF;
+
+    --nav-bg: rgba(88, 28, 135, 0.4);
+    --nav-bg-active: rgba(88, 28, 135, 0.6);
+    --nav-bg-hover: rgba(88, 28, 135, 0.5);
+    --nav-border: transparent;
+    --nav-border-active: rgba(147, 51, 234, 0.6);
+    --nav-border-hover: rgba(147, 51, 234, 0.8);
+    --nav-shadow: rgba(147, 51, 234, 0.3);
+    --nav-shadow-hover: rgba(147, 51, 234, 0.5);
+  }
+
+  body {
+    @apply bg-[var(--color-bg-primary)] text-[var(--color-text-primary)] transition-colors duration-200;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply rounded-md px-4 py-1 text-base transition-all duration-300 border-2;
+    background-color: var(--nav-bg);
+    border-color: var(--nav-border);
+  }
+  
+  .nav-link-active {
+    @apply shadow-[0_0_15px_var(--nav-shadow)];
+    background-color: var(--nav-bg-active);
+    border-color: var(--nav-border-active);
+  }
+  
+  .nav-link-inactive:hover {
+    background-color: var(--nav-bg-hover);
+    border-color: var(--nav-border-hover);
+    box-shadow: 0 0 15px var(--nav-shadow-hover);
+  }
+  
+  .nav-text {
+    @apply text-[var(--nav-text)] transition-all duration-300 tracking-wider leading-none pt-0.5;
+    font-family: 'Bebas Neue', 'Oswald', sans-serif;
+  }
+
+  .cinema-button {
+    font-family: 'Bebas Neue', 'Oswald', sans-serif;
+    @apply tracking-wider text-lg leading-none pt-0.5;
+  }
+}
+
+@layer utilities {
+  .shadow-header {
+    box-shadow: 
+      0 10px 15px -3px rgb(107 114 128 / 0.4),
+      0 4px 6px -4px rgb(107 114 128 / 0.4),
+      inset 0 -20px 25px -5px rgb(147 51 234 / 0.1),
+      inset 0 -10px 10px -5px rgb(147 51 234 / 0.2),
+      inset 20px 0 25px -5px rgb(147 51 234 / 0.1),
+      inset -20px 0 25px -5px rgb(147 51 234 / 0.1);
+  }
+
+  :root.dark .shadow-header {
+    box-shadow: 
+      0 10px 15px -3px rgb(147 51 234 / 0.4),
+      0 4px 6px -4px rgb(147 51 234 / 0.4),
+      inset 0 -20px 25px -5px rgb(147 51 234 / 0.2),
+      inset 0 -10px 10px -5px rgb(147 51 234 / 0.3),
+      inset 20px 0 25px -5px rgb(147 51 234 / 0.2),
+      inset -20px 0 25px -5px rgb(147 51 234 / 0.2);
+  }
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}

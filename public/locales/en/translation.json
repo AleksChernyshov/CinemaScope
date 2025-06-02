@@ -1,0 +1,71 @@
+{
+  "navigation": {
+    "popular": "Popular",
+    "movies": "Movies",
+    "tvShows": "TV Shows",
+    "favorites": "Favorites"
+  },
+  "userMenu": {
+    "profile": "Your Profile",
+    "settings": "Settings",
+    "signOut": "Sign out"
+  },
+  "search": {
+    "placeholder": {
+      "popular": "Search popular movies and TV shows...",
+      "movies": "Search movies...",
+      "tvShows": "Search TV shows...",
+      "favorites": "Search in your favorites..."
+    }
+  },
+  "pages": {
+    "popular": {
+      "title": "Popular Movies & TV Shows"
+    },
+    "movies": {
+      "title": "Movies"
+    },
+    "tvShows": {
+      "title": "TV Shows"
+    },
+    "favorites": {
+      "title": "Your Favorites"
+    }
+  },
+  "movie": {
+    "cast": "Cast",
+    "reviews": "Reviews",
+    "runtime": "{{count}} min",
+    "noReviews": "No reviews yet",
+    "noPoster": "No Poster Available",
+    "back": "Back",
+    "votes": "{{count}} votes",
+    "rating": "Rating",
+    "castAndCrew": "Cast & Crew",
+    "movieReviews": "Movie Reviews",
+    "tvShowReviews": "TV Show Reviews",
+    "reviewSource": "Read full review on TMDB"
+  },
+  "headings": {
+    "trending": "Trending Now",
+    "popular": "Popular Movies",
+    "topRated": "Top Rated",
+    "upcoming": "Upcoming",
+    "similarMovies": "Similar Movies",
+    "recommendedMovies": "Recommended Movies",
+    "searchResults": "Search Results"
+  },
+  "loading": {
+    "movies": "Loading movies...",
+    "details": "Loading details...",
+    "cast": "Loading cast...",
+    "reviews": "Loading reviews..."
+  },
+  "errors": {
+    "fetchMovies": "Failed to fetch movies",
+    "fetchDetails": "Failed to fetch details",
+    "fetchCast": "Failed to fetch cast",
+    "fetchReviews": "Failed to fetch reviews",
+    "noResults": "No results found"
+  }
+} 
