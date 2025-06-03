@@ -4,7 +4,10 @@ import { PopularPage } from './pages/PopularPage';
 import { MoviePage } from './pages/MoviePage';
 import { MoviesPage } from './pages/MoviesPage';
 import { TVShowsPage } from './pages/TVShowsPage';
+import { FavoritesPage } from './pages/FavoritesPage';
 import { ThemeProvider } from './contexts/ThemeContext';
+import { AuthProvider } from './contexts/AuthContext';
+import { ProtectedRoute } from './components/ProtectedRoute';
 import { ScrollToTopButton } from './components/ScrollToTopButton';
 
 const Layout = () => {
@@ -39,6 +42,14 @@ const router = createBrowserRouter([
         path: 'movie/:id',
         element: <MoviePage />,
       },
+      {
+        path: 'favorites',
+        element: (
+          <ProtectedRoute>
+            <FavoritesPage />
+          </ProtectedRoute>
+        ),
+      },
     ],
   },
 ]);
@@ -46,7 +57,9 @@ const router = createBrowserRouter([
 export function App() {
   return (
     <ThemeProvider>
-      <RouterProvider router={router} />
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
     </ThemeProvider>
   );
 }

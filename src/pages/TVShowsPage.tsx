@@ -15,9 +15,9 @@ export function TVShowsPage() {
   const [hasMore, setHasMore] = useState(true);
   const observerRef = useRef<IntersectionObserver | null>(null);
   const loadingRef = useRef<HTMLDivElement>(null);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
-  const loadMoreShows = async (page: number) => {
+  const loadMoreShows = useCallback(async (page: number) => {
     try {
       setIsLoading(true);
       const query = searchParams.get('query');
@@ -38,9 +38,9 @@ export function TVShowsPage() {
     } finally {
       setIsLoading(false);
     }
-  };
+  }, [searchParams]);
 
-  const handleSearch = async (query: string) => {
+  const handleSearch = useCallback(async (query: string) => {
     try {
       setIsLoading(true);
       setShows([]);
@@ -67,7 +67,7 @@ export function TVShowsPage() {
     } finally {
       setIsLoading(false);
     }
-  };
+  }, []);
 
   const lastElementRef = useCallback((node: HTMLDivElement) => {
     if (isLoading) return;
@@ -85,7 +85,7 @@ export function TVShowsPage() {
     if (node) {
       observerRef.current.observe(node);
     }
-  }, [isLoading, hasMore, currentPage]);
+  }, [isLoading, hasMore, currentPage, loadMoreShows]);
 
   useEffect(() => {
     const query = searchParams.get('query');
@@ -96,7 +96,14 @@ export function TVShowsPage() {
         observerRef.current.disconnect();
       }
     };
-  }, []);
+  }, [searchParams, handleSearch]);
+
+  useEffect(() => {
+    setShows([]);
+    setCurrentPage(1);
+    const query = searchParams.get('query');
+    handleSearch(query || '');
+  }, [i18n.language, searchParams, handleSearch]);
 
   return (
     <div className="container mx-auto px-4 py-8">

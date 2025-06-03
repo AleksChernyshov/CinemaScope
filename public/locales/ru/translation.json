@@ -29,7 +29,8 @@
       "title": "Сериалы"
     },
     "favorites": {
-      "title": "Ваше избранное"
+      "title": "Ваше избранное",
+      "empty": "В избранном пока ничего нет"
     }
   },
   "movie": {
@@ -67,5 +68,18 @@
     "fetchCast": "Не удалось загрузить актёров",
     "fetchReviews": "Не удалось загрузить отзывы",
     "noResults": "Ничего не найдено"
+  },
+  "auth": {
+    "login": "Вход",
+    "register": "Регистрация",
+    "username": "Имя пользователя",
+    "password": "Пароль",
+    "loginButton": "Войти",
+    "registerButton": "Создать аккаунт",
+    "noAccount": "Нет аккаунта?",
+    "haveAccount": "Уже есть аккаунт?",
+    "loginLink": "Войти",
+    "registerLink": "Создать",
+    "logout": "Выйти"
   }
 } 

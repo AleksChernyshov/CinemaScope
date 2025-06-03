@@ -16,8 +16,8 @@ export function LanguageToggle() {
 
   return (
     <Menu as="div" className="relative">
-      <Menu.Button className="relative flex items-center rounded-full bg-bg-secondary/95 px-3 pt-2 pb-1.5 text-sm transition-all duration-200 hover:bg-purple-500/20 border-2 border-purple-500/50 hover:border-purple-500/70 shadow-[0_0_10px_rgba(147,51,234,0.4)] hover:shadow-[0_0_15px_rgba(147,51,234,0.5)]">
-        <span className="nav-text">{currentLanguage.name}</span>
+      <Menu.Button className="relative flex items-center justify-center rounded-full bg-bg-secondary/95 px-3 py-2 text-sm transition-all duration-200 hover:bg-purple-500/20 border-2 border-purple-500/50 hover:border-purple-500/70 shadow-[0_0_10px_rgba(147,51,234,0.4)] hover:shadow-[0_0_15px_rgba(147,51,234,0.5)]">
+        <span className="nav-text leading-none">{currentLanguage.name}</span>
       </Menu.Button>
       <Transition
         as={Fragment}

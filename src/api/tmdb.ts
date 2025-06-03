@@ -3,7 +3,7 @@ import type { MovieResponse } from '../types/movie';
 import i18next from 'i18next';
 
 const BASE_URL = 'https://api.themoviedb.org/3';
-const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
+const API_KEY = "c1e53addfa80b01d9b5d3a3d23b4febe"
 
 interface CreditsResponse {
   id: number;

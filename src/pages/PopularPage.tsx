@@ -15,7 +15,7 @@ export function PopularPage() {
   const [hasMore, setHasMore] = useState(true);
   const observerRef = useRef<IntersectionObserver | null>(null);
   const loadingRef = useRef<HTMLDivElement>(null);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const loadMoreMovies = async (page: number) => {
     try {
@@ -82,6 +82,13 @@ export function PopularPage() {
       }
     };
   }, []);
+
+  useEffect(() => {
+    setMovies([]);
+    setCurrentPage(1);
+    const query = searchParams.get('query');
+    handleSearch(query || '');
+  }, [i18n.language]);
 
   return (
     <div className="container mx-auto px-4 py-8">

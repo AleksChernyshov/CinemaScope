@@ -15,7 +15,7 @@
       "popular": "Search popular movies and TV shows...",
       "movies": "Search movies...",
       "tvShows": "Search TV shows...",
-      "favorites": "Search in your favorites..."
+      "favorites": "Search in favorites..."
     }
   },
   "pages": {
@@ -29,7 +29,8 @@
       "title": "TV Shows"
     },
     "favorites": {
-      "title": "Your Favorites"
+      "title": "Your Favorites",
+      "empty": "Your favorites list is empty"
     }
   },
   "movie": {
@@ -67,5 +68,18 @@
     "fetchCast": "Failed to fetch cast",
     "fetchReviews": "Failed to fetch reviews",
     "noResults": "No results found"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "username": "Username",
+    "password": "Password",
+    "loginButton": "Sign In",
+    "registerButton": "Create Account",
+    "noAccount": "Don't have an account?",
+    "haveAccount": "Already have an account?",
+    "loginLink": "Sign In",
+    "registerLink": "Create one",
+    "logout": "Logout"
   }
 } 

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { requestDetails } from '../api/tmdb';
 import type { Movie } from '../types/movie';
+import { useTranslation } from 'react-i18next';
 
 interface MovieDetailsResponse {
   id: number;
@@ -23,6 +24,7 @@ export function useMovie(id: string, type: 'movie' | 'tv') {
   const [movie, setMovie] = useState<Movie | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const { i18n } = useTranslation();
 
   useEffect(() => {
     const fetchMovie = async () => {
@@ -47,7 +49,7 @@ export function useMovie(id: string, type: 'movie' | 'tv') {
     if (id) {
       fetchMovie();
     }
-  }, [id, type]);
+  }, [id, type, i18n.language]);
 
   return { movie, isLoading, error };
 } 
