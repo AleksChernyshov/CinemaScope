@@ -1,38 +1,30 @@
-import { useEffect, useState, useRef, useCallback } from 'react';
-import { requestTrendingMovies, requestSearchMovies } from '../api/tmdb';
-import type { Movie } from '../types/movie';
-import { MovieCard } from '../components/MovieCard';
-import { SearchBar } from '../components/SearchBar';
+import { useEffect, useState, useCallback } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { requestTrendingMovies, requestSearchMovies } from '../api/tmdb';
+import { useInfiniteScroll } from '../hooks/useInfiniteScroll';
+import type { Movie } from '../types/movie';
+import { SearchBar } from '../components/SearchBar';
+import { MoviesGrid } from '../components/movies/MoviesGrid';
+import { MoviesEmptyState } from '../components/movies/MoviesEmptyState';
+import { MoviesLoadingState } from '../components/movies/MoviesLoadingState';
+
+// Styling constants
+const STYLES = {
+  container: "container mx-auto px-4 py-8",
+  header: "text-center mb-8",
+  title: "text-5xl tracking-wider mb-6",
+  error: "text-center text-error"
+};
 
 export function PopularPage() {
   const [searchParams] = useSearchParams();
   const [movies, setMovies] = useState<Movie[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
-  const observerRef = useRef<IntersectionObserver | null>(null);
-  const loadingRef = useRef<HTMLDivElement>(null);
   const { t, i18n } = useTranslation();
-
-  const loadMoreMovies = async (page: number) => {
-    try {
-      setIsLoading(true);
-      const query = searchParams.get('query');
-      const data = query 
-        ? await requestSearchMovies(query, page)
-        : await requestTrendingMovies(page);
-      setMovies(prevMovies => [...prevMovies, ...data.results]);
-      setHasMore(page < data.total_pages);
-      setCurrentPage(page);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to fetch movies');
-    } finally {
-      setIsLoading(false);
-    }
-  };
 
   const handleSearch = useCallback(async (query: string) => {
     try {
@@ -40,11 +32,19 @@ export function PopularPage() {
       setCurrentPage(1);
       if (query) {
         const data = await requestSearchMovies(query);
-        setMovies(data.results);
+        const moviesWithType = data.results.map(movie => ({
+          ...movie,
+          media_type: 'movie' as const
+        }));
+        setMovies(moviesWithType);
         setHasMore(1 < data.total_pages);
       } else {
         const data = await requestTrendingMovies(1);
-        setMovies(data.results);
+        const moviesWithType = data.results.map(movie => ({
+          ...movie,
+          media_type: movie.media_type || 'movie'
+        }));
+        setMovies(moviesWithType);
         setHasMore(1 < data.total_pages);
       }
     } catch (err) {
@@ -54,46 +54,46 @@ export function PopularPage() {
     }
   }, []);
 
-  const lastElementRef = useCallback((node: HTMLDivElement) => {
+  const loadMoreMovies = useCallback(async (page: number) => {
     if (isLoading) return;
     
-    if (observerRef.current) {
-      observerRef.current.disconnect();
+    try {
+      setIsLoading(true);
+      const query = searchParams.get('query');
+      const data = query 
+        ? await requestSearchMovies(query, page)
+        : await requestTrendingMovies(page);
+      
+      const moviesWithType = data.results.map(movie => ({
+        ...movie,
+        media_type: query ? 'movie' : (movie.media_type || 'movie')
+      }));
+      
+      setMovies(prevMovies => [...prevMovies, ...moviesWithType]);
+      setHasMore(page < data.total_pages);
+      setCurrentPage(page);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to fetch movies');
+    } finally {
+      setIsLoading(false);
     }
+  }, [searchParams, isLoading]);
 
-    observerRef.current = new IntersectionObserver(entries => {
-      if (entries[0].isIntersecting && hasMore) {
-        loadMoreMovies(currentPage + 1);
-      }
-    });
-
-    if (node) {
-      observerRef.current.observe(node);
-    }
-  }, [isLoading, hasMore, currentPage]);
+  const { lastElementRef } = useInfiniteScroll({
+    isLoading,
+    hasMore,
+    onLoadMore: useCallback(() => loadMoreMovies(currentPage + 1), [loadMoreMovies, currentPage])
+  });
 
   useEffect(() => {
     const query = searchParams.get('query');
     handleSearch(query || '');
-
-    return () => {
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-      }
-    };
-  }, []);
-
-  useEffect(() => {
-    setMovies([]);
-    setCurrentPage(1);
-    const query = searchParams.get('query');
-    handleSearch(query || '');
-  }, [i18n.language]);
+  }, [searchParams, handleSearch, i18n.language]);
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="text-center mb-8">
-        <h1 className="text-5xl tracking-wider mb-6">
+    <div className={STYLES.container}>
+      <div className={STYLES.header}>
+        <h1 className={STYLES.title}>
           {searchParams.get('query') 
             ? t('headings.searchResults')
             : t('pages.popular.title')}
@@ -102,24 +102,21 @@ export function PopularPage() {
       </div>
 
       {error && (
-        <div className="text-center text-error">{error}</div>
+        <div className={STYLES.error}>{t('errors.fetchMovies')}</div>
       )}
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-        {movies.map((movie, index) => (
-          <div
-            key={`popular-${movie.id}-${currentPage}-${index}`}
-            ref={index === movies.length - 1 ? lastElementRef : undefined}
-          >
-            <MovieCard movie={movie} />
-          </div>
-        ))}
-      </div>
+      {!isLoading && movies.length === 0 ? (
+        <MoviesEmptyState searchQuery={searchParams.get('query')} />
+      ) : (
+        <MoviesGrid 
+          movies={movies}
+          isLoading={isLoading}
+          lastElementRef={lastElementRef}
+        />
+      )}
 
-      {isLoading && (
-        <div className="text-center text-text-secondary mt-8" ref={loadingRef}>
-          {t('loading.movies')}
-        </div>
+      {isLoading && currentPage === 1 && (
+        <MoviesLoadingState message={t('loading.movies')} />
       )}
     </div>
   );

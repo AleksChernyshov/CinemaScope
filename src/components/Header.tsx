@@ -1,46 +1,58 @@
 import { Disclosure } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
 import logo from '../assets/CinemaScope-logo.png';
 import { ThemeToggle } from './ThemeToggle';
 import { Navigation } from './Navigation';
 import { UserMenu } from './UserMenu';
 import { LanguageToggle } from './LanguageToggle';
+import { MenuButton } from './MenuButton';
 
+// Styling constants
+const HEADER_STYLES = {
+  nav: "bg-bg-secondary/95 backdrop-blur-md sticky top-0 z-50 rounded-b-xl shadow-header",
+  container: "container mx-auto px-4",
+  wrapper: "relative flex h-20 justify-between items-center",
+  mobileMenu: "flex sm:hidden",
+  desktopNav: "hidden sm:flex sm:items-center sm:justify-center absolute left-1/2 -translate-x-1/2",
+  controls: "flex items-center gap-3",
+  logo: "h-16 w-auto"
+};
+
+const NAVIGATION_ITEMS = [
+  { to: '/', label: 'pages.home' },
+  { to: '/movies', label: 'pages.movies' },
+  { to: '/tv', label: 'pages.tvShows' },
+  { to: '/popular', label: 'pages.popular' },
+  { to: '/favorites', label: 'pages.favorites' }
+];
+
+// Main header component with navigation and controls
 export function Header() {
   return (
-    <Disclosure as="nav" className="bg-bg-secondary/95 backdrop-blur-md sticky top-0 z-50 rounded-b-xl shadow-header">
+    <Disclosure as="nav" className={HEADER_STYLES.nav}>
       {({ open }) => (
         <>
-          <div className="container mx-auto px-4">
-            <div className="relative flex h-20 justify-between items-center">
+          <div className={HEADER_STYLES.container}>
+            <div className={HEADER_STYLES.wrapper}>
               {/* Mobile menu button */}
-              <div className="flex sm:hidden">
-                <Disclosure.Button className="group relative inline-flex items-center justify-center rounded-md p-2 text-text-secondary hover:bg-bg-secondary hover:text-text-accent">
-                  <span className="absolute -inset-0.5" />
-                  <span className="sr-only">Open menu</span>
-                  {open ? (
-                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-                  ) : (
-                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                  )}
-                </Disclosure.Button>
+              <div className={HEADER_STYLES.mobileMenu}>
+                <MenuButton open={open} />
               </div>
 
               {/* Logo */}
               <div className="flex items-center">
                 <Link to="/" className="shrink-0">
-                  <img src={logo} alt="CinemaScope" className="h-16 w-auto" />
+                  <img src={logo} alt="CinemaScope" className={HEADER_STYLES.logo} />
                 </Link>
               </div>
 
-              {/* Navigation - centered on desktop */}
-              <div className="hidden sm:flex sm:items-center sm:justify-center absolute left-1/2 -translate-x-1/2">
+              {/* Desktop navigation */}
+              <div className={HEADER_STYLES.desktopNav}>
                 <Navigation />
               </div>
 
               {/* Right side controls */}
-              <div className="flex items-center gap-3">
+              <div className={HEADER_STYLES.controls}>
                 <LanguageToggle />
                 <ThemeToggle />
                 <UserMenu />
@@ -48,7 +60,7 @@ export function Header() {
             </div>
           </div>
 
-          {/* Mobile menu */}
+          {/* Mobile navigation panel */}
           <Disclosure.Panel className="sm:hidden">
             <Navigation mobile as={Disclosure.Button} />
           </Disclosure.Panel>
@@ -57,7 +69,3 @@ export function Header() {
     </Disclosure>
   );
 }
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
-} 

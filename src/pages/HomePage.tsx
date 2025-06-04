@@ -1,7 +1,14 @@
 import { useEffect, useState } from 'react';
 import { requestTrendingMovies } from '../api/tmdb';
+import { MovieGrid } from '../components/MovieGrid';
+import { LoadingState } from '../components/LoadingState';
+import { ErrorState } from '../components/ErrorState';
 import type { Movie } from '../types/movie';
-import { MovieCard } from '../components/MovieCard';
+
+// Styling constants
+const STYLES = {
+  container: "container mx-auto px-4 py-8"
+};
 
 export function HomePage() {
   const [movies, setMovies] = useState<Movie[]>([]);
@@ -24,20 +31,10 @@ export function HomePage() {
   }, []);
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      {isLoading && (
-        <div className="text-center text-text-secondary">Loading...</div>
-      )}
-
-      {error && (
-        <div className="text-center text-error">{error}</div>
-      )}
-
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-        {movies.map((movie) => (
-          <MovieCard key={movie.id} movie={movie} />
-        ))}
-      </div>
+    <div className={STYLES.container}>
+      {isLoading && <LoadingState />}
+      {error && <ErrorState message={error} />}
+      {!isLoading && !error && <MovieGrid movies={movies} />}
     </div>
   );
 } 

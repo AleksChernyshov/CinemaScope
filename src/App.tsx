@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider, ScrollRestoration, Outlet } from 'react-router-dom';
+import { createHashRouter, RouterProvider, ScrollRestoration, Outlet } from 'react-router-dom';
 import { Header } from './components/Header';
 import { PopularPage } from './pages/PopularPage';
 import { MoviePage } from './pages/MoviePage';
@@ -22,7 +22,7 @@ const Layout = () => {
   );
 };
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <Layout />,

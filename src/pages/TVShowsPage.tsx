@@ -96,14 +96,7 @@ export function TVShowsPage() {
         observerRef.current.disconnect();
       }
     };
-  }, [searchParams, handleSearch]);
-
-  useEffect(() => {
-    setShows([]);
-    setCurrentPage(1);
-    const query = searchParams.get('query');
-    handleSearch(query || '');
-  }, [i18n.language, searchParams, handleSearch]);
+  }, [searchParams, handleSearch, i18n.language]);
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -131,7 +124,7 @@ export function TVShowsPage() {
         ))}
       </div>
 
-      {isLoading && (
+      {isLoading && currentPage === 1 && (
         <div className="text-center text-text-secondary mt-8" ref={loadingRef}>
           {t('loading.movies')}
         </div>
