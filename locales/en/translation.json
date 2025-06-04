@@ -1,0 +1,111 @@
+{
+  "navigation": {
+    "popular": "Popular",
+    "movies": "Movies",
+    "tvShows": "TV Shows",
+    "favorites": "Favorites"
+  },
+  "userMenu": {
+    "profile": "Your Profile",
+    "settings": "Settings",
+    "signOut": "Sign out",
+    "edit": "Edit Profile"
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel"
+  },
+  "search": {
+    "placeholder": {
+      "popular": "Search popular movies and TV shows...",
+      "movies": "Search movies...",
+      "tvShows": "Search TV shows...",
+      "favorites": "Search in favorites..."
+    }
+  },
+  "pages": {
+    "popular": {
+      "title": "Popular Movies & TV Shows"
+    },
+    "movies": {
+      "title": "Movies"
+    },
+    "tvShows": {
+      "title": "TV Shows"
+    },
+    "favorites": {
+      "title": "Your Favorites",
+      "empty": "Your favorites list is empty"
+    }
+  },
+  "movie": {
+    "cast": "Cast",
+    "reviews": "Reviews",
+    "runtime": "{{count}} min",
+    "noReviews": "No reviews yet",
+    "noPoster": "No Poster Available",
+    "back": "Back",
+    "votes": "{{count}} votes",
+    "rating": "Rating",
+    "castAndCrew": "Cast & Crew",
+    "movieReviews": "Movie Reviews",
+    "tvShowReviews": "TV Show Reviews",
+    "reviewSource": "Read full review on TMDB"
+  },
+  "headings": {
+    "trending": "Trending Now",
+    "popular": "Popular Movies",
+    "topRated": "Top Rated",
+    "upcoming": "Upcoming",
+    "similarMovies": "Similar Movies",
+    "recommendedMovies": "Recommended Movies",
+    "searchResults": "Search Results"
+  },
+  "loading": {
+    "movies": "Loading movies...",
+    "details": "Loading details...",
+    "cast": "Loading cast...",
+    "reviews": "Loading reviews..."
+  },
+  "errors": {
+    "fetchMovies": "Failed to fetch movies",
+    "fetchDetails": "Failed to fetch details",
+    "fetchCast": "Failed to fetch cast",
+    "fetchReviews": "Failed to fetch reviews",
+    "noResults": "No results found"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "username": "Username",
+    "password": "Password",
+    "loginButton": "Sign In",
+    "registerButton": "Create Account",
+    "noAccount": "Don't have an account?",
+    "haveAccount": "Already have an account?",
+    "loginLink": "Sign In",
+    "registerLink": "Create one",
+    "logout": "Logout"
+  },
+  "profile": {
+    "fields": {
+      "phone": "Phone",
+      "email": "Email",
+      "location": "Location",
+      "birthday": "Birthday",
+      "favoriteGenre": "Favorite Genre",
+      "watchedMovies": "Watched Movies",
+      "reviewsWritten": "Reviews Written",
+      "averageRating": "Average Rating"
+    },
+    "avatar": {
+      "change": "Change photo",
+      "upload": "Upload new photo"
+    },
+    "placeholders": {
+      "location": "Set your location",
+      "birthday": "Set your birthday",
+      "favoriteGenre": "Set your favorite genre"
+    }
+  }
+} 

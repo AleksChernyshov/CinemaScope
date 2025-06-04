@@ -1,0 +1,111 @@
+{
+  "navigation": {
+    "popular": "Популярное",
+    "movies": "Фильмы",
+    "tvShows": "Сериалы",
+    "favorites": "Избранное"
+  },
+  "userMenu": {
+    "profile": "Ваш профиль",
+    "settings": "Настройки",
+    "signOut": "Выйти",
+    "edit": "Редактировать профиль"
+  },
+  "common": {
+    "save": "Сохранить",
+    "cancel": "Отмена"
+  },
+  "search": {
+    "placeholder": {
+      "popular": "Поиск популярных фильмов и сериалов...",
+      "movies": "Поиск фильмов...",
+      "tvShows": "Поиск сериалов...",
+      "favorites": "Поиск в избранном..."
+    }
+  },
+  "pages": {
+    "popular": {
+      "title": "Популярные фильмы и сериалы"
+    },
+    "movies": {
+      "title": "Фильмы"
+    },
+    "tvShows": {
+      "title": "Сериалы"
+    },
+    "favorites": {
+      "title": "Ваше избранное",
+      "empty": "В избранном пока ничего нет"
+    }
+  },
+  "movie": {
+    "cast": "В ролях",
+    "reviews": "Отзывы",
+    "runtime": "{{count}} мин",
+    "noReviews": "Пока нет отзывов",
+    "noPoster": "Постер отсутствует",
+    "back": "Назад",
+    "votes": "{{count}} голосов",
+    "rating": "Рейтинг",
+    "castAndCrew": "Актёры и съёмочная группа",
+    "movieReviews": "Отзывы о фильме",
+    "tvShowReviews": "Отзывы о сериале",
+    "reviewSource": "Читать полный отзыв на TMDB"
+  },
+  "headings": {
+    "trending": "В тренде",
+    "popular": "Популярные фильмы",
+    "topRated": "Высокий рейтинг",
+    "upcoming": "Скоро",
+    "similarMovies": "Похожие фильмы",
+    "recommendedMovies": "Рекомендуемые фильмы",
+    "searchResults": "Результаты поиска"
+  },
+  "loading": {
+    "movies": "Загрузка фильмов...",
+    "details": "Загрузка информации...",
+    "cast": "Загрузка актёров...",
+    "reviews": "Загрузка отзывов..."
+  },
+  "errors": {
+    "fetchMovies": "Не удалось загрузить фильмы",
+    "fetchDetails": "Не удалось загрузить информацию",
+    "fetchCast": "Не удалось загрузить актёров",
+    "fetchReviews": "Не удалось загрузить отзывы",
+    "noResults": "Ничего не найдено"
+  },
+  "auth": {
+    "login": "Вход",
+    "register": "Регистрация",
+    "username": "Имя пользователя",
+    "password": "Пароль",
+    "loginButton": "Войти",
+    "registerButton": "Создать аккаунт",
+    "noAccount": "Нет аккаунта?",
+    "haveAccount": "Уже есть аккаунт?",
+    "loginLink": "Войти",
+    "registerLink": "Создать",
+    "logout": "Выйти"
+  },
+  "profile": {
+    "fields": {
+      "phone": "Телефон",
+      "email": "Электронная почта",
+      "location": "Местоположение",
+      "birthday": "Дата рождения",
+      "favoriteGenre": "Любимый жанр",
+      "watchedMovies": "Просмотрено фильмов",
+      "reviewsWritten": "Написано рецензий",
+      "averageRating": "Средняя оценка"
+    },
+    "avatar": {
+      "change": "Изменить фото",
+      "upload": "Загрузить новое фото"
+    },
+    "placeholders": {
+      "location": "Укажите местоположение",
+      "birthday": "Укажите дату рождения",
+      "favoriteGenre": "Укажите любимый жанр"
+    }
+  }
+} 
