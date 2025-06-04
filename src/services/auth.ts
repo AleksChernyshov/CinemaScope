@@ -38,7 +38,8 @@ export const register = async (username: string, password: string): Promise<void
   const newUser: StoredUser = {
     username,
     password,
-    favorites: []
+    favorites: [],
+    avatar: ''
   };
 
   users[username] = newUser;
@@ -93,5 +94,23 @@ export const removeFromFavorites = (userId: string, movieId: string): void => {
   if (currentUser && currentUser.username === userId) {
     currentUser.favorites = user.favorites;
     saveCurrentUser(currentUser);
+  }
+};
+
+export const updateUserAvatar = async (username: string, avatar: string): Promise<void> => {
+  const users = getUsers();
+  const user = users[username];
+  
+  if (!user) {
+    throw new Error('User not found');
+  }
+
+  user.avatar = avatar;
+  users[username] = user;
+  saveUsers(users);
+
+  const currentUser = getCurrentUser();
+  if (currentUser && currentUser.username === username) {
+    saveCurrentUser({ ...currentUser, avatar });
   }
 }; 

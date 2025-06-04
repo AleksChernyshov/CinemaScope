@@ -8,7 +8,12 @@
   "userMenu": {
     "profile": "Your Profile",
     "settings": "Settings",
-    "signOut": "Sign out"
+    "signOut": "Sign out",
+    "edit": "Edit Profile"
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel"
   },
   "search": {
     "placeholder": {
@@ -81,5 +86,26 @@
     "loginLink": "Sign In",
     "registerLink": "Create one",
     "logout": "Logout"
+  },
+  "profile": {
+    "fields": {
+      "phone": "Phone",
+      "email": "Email",
+      "location": "Location",
+      "birthday": "Birthday",
+      "favoriteGenre": "Favorite Genre",
+      "watchedMovies": "Watched Movies",
+      "reviewsWritten": "Reviews Written",
+      "averageRating": "Average Rating"
+    },
+    "avatar": {
+      "change": "Change photo",
+      "upload": "Upload new photo"
+    },
+    "placeholders": {
+      "location": "Set your location",
+      "birthday": "Set your birthday",
+      "favoriteGenre": "Set your favorite genre"
+    }
   }
 } 

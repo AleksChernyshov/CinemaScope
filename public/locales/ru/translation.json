@@ -8,7 +8,12 @@
   "userMenu": {
     "profile": "Ваш профиль",
     "settings": "Настройки",
-    "signOut": "Выйти"
+    "signOut": "Выйти",
+    "edit": "Редактировать профиль"
+  },
+  "common": {
+    "save": "Сохранить",
+    "cancel": "Отмена"
   },
   "search": {
     "placeholder": {
@@ -81,5 +86,26 @@
     "loginLink": "Войти",
     "registerLink": "Создать",
     "logout": "Выйти"
+  },
+  "profile": {
+    "fields": {
+      "phone": "Телефон",
+      "email": "Электронная почта",
+      "location": "Местоположение",
+      "birthday": "Дата рождения",
+      "favoriteGenre": "Любимый жанр",
+      "watchedMovies": "Просмотрено фильмов",
+      "reviewsWritten": "Написано рецензий",
+      "averageRating": "Средняя оценка"
+    },
+    "avatar": {
+      "change": "Изменить фото",
+      "upload": "Загрузить новое фото"
+    },
+    "placeholders": {
+      "location": "Укажите местоположение",
+      "birthday": "Укажите дату рождения",
+      "favoriteGenre": "Укажите любимый жанр"
+    }
   }
 } 

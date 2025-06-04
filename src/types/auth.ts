@@ -1,6 +1,7 @@
 export interface User {
   username: string;
   favorites: string[];
+  avatar?: string;
 }
 
 export interface AuthContextType {

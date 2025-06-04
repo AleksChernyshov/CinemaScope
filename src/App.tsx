@@ -5,6 +5,7 @@ import { MoviePage } from './pages/MoviePage';
 import { MoviesPage } from './pages/MoviesPage';
 import { TVShowsPage } from './pages/TVShowsPage';
 import { FavoritesPage } from './pages/FavoritesPage';
+import Profile from './pages/Profile';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { AuthProvider } from './contexts/AuthContext';
 import { ProtectedRoute } from './components/ProtectedRoute';
@@ -47,6 +48,14 @@ const router = createBrowserRouter([
         element: (
           <ProtectedRoute>
             <FavoritesPage />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: 'profile',
+        element: (
+          <ProtectedRoute>
+            <Profile />
           </ProtectedRoute>
         ),
       },
