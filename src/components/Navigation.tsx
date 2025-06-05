@@ -9,11 +9,10 @@ const navigation = [
 ];
 
 interface NavigationProps {
-  mobile?: boolean;
-  as?: React.ElementType;
+  className?: string;
 }
 
-export function Navigation({ mobile = false, as: Component = 'div' }: NavigationProps) {
+export function Navigation({ className = "flex items-center space-x-4" }: NavigationProps) {
   const location = useLocation();
   const { t } = useTranslation();
 
@@ -22,7 +21,7 @@ export function Navigation({ mobile = false, as: Component = 'div' }: Navigation
   };
 
   return (
-    <Component className={mobile ? "space-y-1 px-2 pb-3 pt-2" : "flex space-x-4"}>
+    <div className={className}>
       {navigation.map((item) => (
         <Link
           key={item.name}
@@ -36,6 +35,6 @@ export function Navigation({ mobile = false, as: Component = 'div' }: Navigation
           </span>
         </Link>
       ))}
-    </Component>
+    </div>
   );
 } 

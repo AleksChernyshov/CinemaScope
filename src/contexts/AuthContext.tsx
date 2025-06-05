@@ -51,6 +51,12 @@ export function AuthProvider({ children }: AuthProviderProps) {
     register,
     logout,
     isAuthenticated,
+    updateUser: (updates: Partial<User>) => {
+      if (!user) return;
+      const updatedUser = { ...user, ...updates };
+      setUser(updatedUser);
+      localStorage.setItem('currentUser', JSON.stringify(updatedUser));
+    }
   };
 
   return (
