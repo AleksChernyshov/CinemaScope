@@ -1,6 +1,6 @@
 import { ArrowLeftIcon } from '@heroicons/react/24/outline';
 import { useTranslation } from 'react-i18next';
-import { ImagePlaceholder } from '../ImagePlaceholder';
+import { ImagePlaceholder } from '../ui/ImagePlaceholder';
 import type { MoviePosterProps } from '../../types/movie.types';
 
 // Styling constants

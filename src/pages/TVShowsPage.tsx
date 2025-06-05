@@ -1,12 +1,12 @@
 import { useEffect, useState, useRef, useCallback } from 'react';
 import { requestTV, requestSearchTV } from '../api/tmdb';
 import type { Movie } from '../types/movie';
-import { MovieCard } from '../components/MovieCard';
-import { SearchBar } from '../components/SearchBar';
+import { MovieCard } from '../components/movie/MovieCard';
+import { SearchBar } from '../components/ui/SearchBar';
 import { useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { MoviesEmptyState } from '../components/movies/MoviesEmptyState';
-import { MoviesLoadingState } from '../components/movies/MoviesLoadingState';
+import { MoviesEmptyState } from '../components/movie/MoviesEmptyState';
+import { MoviesLoadingState } from '../components/movie/MoviesLoadingState';
 
 // Styling constants
 const STYLES = {

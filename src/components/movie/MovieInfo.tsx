@@ -1,4 +1,3 @@
-import { useTranslation } from 'react-i18next';
 import type { MovieInfoProps } from '../../types/movie.types';
 import { MovieMetadata } from './MovieMetadata';
 import { MovieGenres } from './MovieGenres';

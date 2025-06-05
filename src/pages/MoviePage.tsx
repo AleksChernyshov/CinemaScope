@@ -4,13 +4,14 @@ import { useTranslation } from 'react-i18next';
 import { useAuth } from '../contexts/AuthContext';
 import { useFavoritesStore } from '../store/favoritesStore';
 import { useMovie } from '../hooks/useMovie';
-import { AuthModal } from '../components/AuthModal';
-import { LoadingState } from '../components/LoadingState';
-import { ErrorState } from '../components/ErrorState';
+import { AuthModal } from '../components/auth/AuthModal';
+import { LoadingState } from '../components/common/LoadingState';
+import { ErrorState } from '../components/common/ErrorState';
 import { MoviePoster } from '../components/movie/MoviePoster';
 import { MovieInfo } from '../components/movie/MovieInfo';
 import { MovieTabs } from '../components/movie/MovieTabs';
 import type { TabType, AuthMode } from '../types/movie.types';
+
 
 // Styling constants
 const STYLES = {

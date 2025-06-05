@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { CameraIcon } from '@heroicons/react/20/solid';
-import { UserAvatar } from '../UserAvatar';
+import { UserAvatar } from '../user/UserAvatar';
 import { updateUserAvatar } from '../../services/auth';
 import { useAuth } from '../../contexts/AuthContext';
 import type { ProfileAvatarProps } from '../../types/profile.types';
