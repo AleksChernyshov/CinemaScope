@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import type { AuthenticatedMenuProps } from '../types/menu.types';
-import { MenuItem } from './MenuItem';
+import type { AuthenticatedMenuProps } from '../../types/menu.types';
+import { MenuItem } from '../ui/MenuItem';
 
 // Styling constants
 const STYLES = {

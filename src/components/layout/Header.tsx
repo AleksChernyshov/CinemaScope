@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import logo from '../assets/CinemaScope-logo.png';
-import { ThemeToggle } from './ThemeToggle';
-import { UserMenu } from './UserMenu';
-import { LanguageToggle } from './LanguageToggle';
+import logo from '../../assets/CinemaScope-logo.png';
+import { ThemeToggle } from '../theme/ThemeToggle';
+import { UserMenu } from '../user/UserMenu';
+import { LanguageToggle } from '../language/LanguageToggle';
 import { Navigation } from './Navigation';
 
 // Styling constants

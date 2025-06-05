@@ -1,12 +1,13 @@
 import { Menu, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
-import { useAuth } from '../contexts/AuthContext';
-import { useTheme } from '../contexts/ThemeContext';
-import { AuthModal } from './AuthModal';
+import { useAuth } from '../../contexts/AuthContext';
+import { useTheme } from '../../contexts/ThemeContext';
+import { AuthModal } from '../auth/AuthModal';
 import { UserAvatar } from './UserAvatar';
 import { AuthenticatedMenu } from './AuthenticatedMenu';
 import { UnauthenticatedMenu } from './UnauthenticatedMenu';
-import type { AuthMode } from '../types/menu.types';
+import type { AuthMode } from '../../types/menu.types';
+import { MenuButton } from '../ui/MenuButton';
 
 // Styling constants
 const STYLES = {

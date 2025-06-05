@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import { UserIcon } from './icons/UserIcon';
-import type { ReviewCardProps } from '../types/review.types';
+import { UserIcon } from '../icons/UserIcon';
+import type { ReviewCardProps } from '../../types/review.types';
 
 // Styling constants
 const STYLES = {

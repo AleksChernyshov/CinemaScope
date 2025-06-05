@@ -1,6 +1,6 @@
 import { Menu } from '@headlessui/react';
-import { classNames } from '../utils/classNames';
-import type { LanguageItemProps } from '../types/language.types';
+import { classNames } from '../../utils/classNames';
+import type { LanguageItemProps } from '../../types/language.types';
 
 // Styling constants
 const ITEM_STYLES = {

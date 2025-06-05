@@ -1,6 +1,6 @@
-import moonIcon from '../assets/moon.svg';
-import sunIcon from '../assets/sun.svg';
-import type { ThemeIconProps } from '../types/theme.types';
+import moonIcon from "../../assets/moon.svg";
+import sunIcon from "../../assets/sun.svg";
+import type { ThemeIconProps } from '../../types/theme.types';
 
 // Styling constants
 const STYLES = {

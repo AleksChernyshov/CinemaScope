@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { requestReviews } from '../api/tmdb';
+import { requestReviews } from '../../api/tmdb';
 import { ReviewCard } from './ReviewCard';
-import type { Review, ReviewsSectionProps } from '../types/review.types';
+import type { Review, ReviewsSectionProps } from '../../types/review.types';
 
 // Styling constants
 const STYLES = {

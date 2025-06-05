@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import { CastSection } from '../CastSection';
-import { ReviewsSection } from '../ReviewsSection';
+import { CastSection } from '../cast/CastSection';
+import { ReviewsSection } from '../reviews/ReviewsSection';
 import type { MovieTabsProps, TabType } from '../../types/movie.types';
 
 // Styling constants

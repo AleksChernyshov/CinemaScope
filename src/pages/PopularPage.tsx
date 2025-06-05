@@ -4,10 +4,10 @@ import { useTranslation } from 'react-i18next';
 import { requestTrendingMovies, requestSearchMovies } from '../api/tmdb';
 import { useInfiniteScroll } from '../hooks/useInfiniteScroll';
 import type { Movie } from '../types/movie';
-import { SearchBar } from '../components/SearchBar';
-import { MoviesGrid } from '../components/movies/MoviesGrid';
-import { MoviesEmptyState } from '../components/movies/MoviesEmptyState';
-import { MoviesLoadingState } from '../components/movies/MoviesLoadingState';
+import { SearchBar } from '../components/ui/SearchBar';
+import { MoviesGrid } from '../components/movie/MoviesGrid';
+import { MoviesEmptyState } from '../components/movie/MoviesEmptyState';
+import { MoviesLoadingState } from '../components/movie/MoviesLoadingState';
 
 // Styling constants
 const STYLES = {

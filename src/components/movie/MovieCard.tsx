@@ -1,13 +1,14 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useAuth } from '../contexts/AuthContext';
-import { useFavoritesStore } from '../store/favoritesStore';
-import type { Movie } from '../types/movie';
-import { ImagePlaceholder } from './ImagePlaceholder';
-import { AuthModal } from './AuthModal';
+import { useAuth } from '../../contexts/AuthContext';
+import { useFavoritesStore } from '../../store/favoritesStore';
+import type { Movie } from '../../types/movie';
+import { ImagePlaceholder } from '../ui/ImagePlaceholder';
+import { AuthModal } from '../auth/AuthModal';
 import { FavoriteButton } from './FavoriteButton';
-import { MovieInfo } from './MovieInfo';
+import { MovieCardInfo } from './MovieCardInfo';
+import type { MovieCardProps } from '../../types/movie.types';
 
 // Configuration
 const TMDB_IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500';
@@ -30,10 +31,6 @@ const CARD_STYLES = {
               group-hover:after:from-purple-500/20 group-hover:after:via-purple-500/20 group-hover:after:to-purple-500/20`,
   image: "w-full h-auto aspect-[2/3] object-cover"
 };
-
-interface MovieCardProps {
-  movie: Movie;
-}
 
 // Main movie card component
 export function MovieCard({ movie }: MovieCardProps) {
@@ -102,7 +99,7 @@ export function MovieCard({ movie }: MovieCardProps) {
             )}
           </div>
 
-          <MovieInfo
+          <MovieCardInfo
             title={title}
             rating={rating}
             voteCount={voteCount}

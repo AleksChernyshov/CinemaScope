@@ -1,6 +1,6 @@
-import { useAuth } from '../contexts/AuthContext';
-import { DefaultAvatarIcon } from './DefaultAvatarIcon';
-import type { UserAvatarProps } from '../types/user.types';
+import { useAuth } from "../../contexts/AuthContext";
+import { DefaultAvatarIcon } from "../icons/DefaultAvatarIcon";
+import type { UserAvatarProps } from "../../types/user.types";
 
 // Styling constants
 const STYLES = {

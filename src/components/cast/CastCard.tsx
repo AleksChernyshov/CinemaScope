@@ -1,5 +1,5 @@
-import type { CastCardProps } from '../types/cast.types';
-import { UserIcon } from './icons/UserIcon';
+import type { CastCardProps } from "../../types/cast.types";
+import { UserIcon } from "../icons/UserIcon";
 
 // Configuration for TMDB image URLs
 const TMDB_IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w185';

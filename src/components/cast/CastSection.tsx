@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { requestCredits } from '../api/tmdb';
+import { requestCredits } from '../../api/tmdb';
 import { CastCard } from './CastCard';
-import type { CastMember, CastSectionProps } from '../types/cast.types';
+import type { CastMember, CastSectionProps } from '../../types/cast.types';
 
 // Main component for displaying movie/TV show cast section
 export function CastSection({ movieId, type }: CastSectionProps) {

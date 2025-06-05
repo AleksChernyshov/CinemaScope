@@ -1,6 +1,6 @@
 import { createHashRouter, RouterProvider, Outlet } from 'react-router-dom';
-import { Header } from './components/Header';
-import { MobileNavigation } from './components/MobileNavigation';
+import { Header } from './components/layout/Header';
+import { MobileNavigation } from './components/layout/MobileNavigation';
 import { PopularPage } from './pages/PopularPage';
 import { MoviePage } from './pages/MoviePage';
 import { MoviesPage } from './pages/MoviesPage';
@@ -9,8 +9,8 @@ import { FavoritesPage } from './pages/FavoritesPage';
 import Profile from './pages/Profile';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { AuthProvider } from './contexts/AuthContext';
-import { ProtectedRoute } from './components/ProtectedRoute';
-import { ScrollToTopButton } from './components/ScrollToTopButton';
+import { ProtectedRoute } from './components/auth/ProtectedRoute';
+import { ScrollToTopButton } from './components/ui/ScrollToTopButton';
 
 const Layout = () => {
   return (

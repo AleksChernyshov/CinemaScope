@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useAuth } from '../contexts/AuthContext';
-import { useTheme } from '../contexts/ThemeContext';
-import { InputField } from './InputField';
-import type { AuthFormProps } from '../types/auth.types';
+import { useAuth } from '../../contexts/AuthContext';
+import { useTheme } from '../../contexts/ThemeContext';
+import { InputField } from '../ui/InputField';
+import type { AuthFormProps } from '../../types/auth.types';
 
 // Styling constants
 const FORM_CONTAINER_STYLES = `max-w-md mx-auto p-8 rounded-xl backdrop-blur-md 

@@ -1,5 +1,5 @@
 import { Switch } from '@headlessui/react';
-import { useTheme } from '../contexts/ThemeContext';
+import { useTheme } from '../../contexts/ThemeContext';
 import { ThemeKnob } from './ThemeKnob';
 
 // Styling constants

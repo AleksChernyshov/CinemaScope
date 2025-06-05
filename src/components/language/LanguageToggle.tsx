@@ -1,8 +1,8 @@
 import { Menu, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useTheme } from '../contexts/ThemeContext';
-import { SUPPORTED_LANGUAGES } from '../config/languages';
+import { useTheme } from '../../contexts/ThemeContext';
+import { SUPPORTED_LANGUAGES } from '../../config/languages';
 import { LanguageItem } from './LanguageItem';
 
 // Styling constants

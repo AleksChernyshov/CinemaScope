@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import type { UnauthenticatedMenuProps } from '../types/menu.types';
-import { MenuItem } from './MenuItem';
+import type { UnauthenticatedMenuProps } from '../../types/menu.types';
+import { MenuItem } from '../ui/MenuItem';
 
 export function UnauthenticatedMenu({ onLogin, onRegister }: UnauthenticatedMenuProps) {
   const { t } = useTranslation();

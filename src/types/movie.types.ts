@@ -4,6 +4,10 @@ export type TabType = 'cast' | 'reviews';
 export type AuthMode = 'login' | 'register';
 export type MediaType = 'movie' | 'tv';
 
+export interface MovieCardProps {
+  movie: Movie;
+}
+
 export interface MovieHeaderProps {
   movie: Movie;
   onBack: () => void;

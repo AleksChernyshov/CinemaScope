@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { EmptyState } from '../components/EmptyState';
-import { MovieGrid } from '../components/MovieGrid';
+import { EmptyState } from '../components/common/EmptyState';
+import { MovieGrid } from '../components/movie/MovieGrid';
 import { useFavoritesStore } from '../store/favoritesStore';
-import { MoviesLoadingState } from '../components/movies/MoviesLoadingState';
+import { MoviesLoadingState } from '../components/movie/MoviesLoadingState';
 import { getMovieDetails } from '../api/movies';
 import { getTVShowDetails } from '../api/tvShows';
 import type { Movie } from '../types/movie';

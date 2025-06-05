@@ -2,8 +2,8 @@ import { useState, useEffect, useCallback } from 'react';
 import { useNavigate, useSearchParams, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { SearchInput } from './SearchInput';
-import { getSearchPlaceholderKey } from '../utils/searchUtils';
-import type { SearchBarProps } from '../types/search.types';
+import { getSearchPlaceholderKey } from '../../utils/searchUtils';
+import type { SearchBarProps } from '../../types/search.types';
 
 // Constants
 const DEBOUNCE_DELAY = 500;

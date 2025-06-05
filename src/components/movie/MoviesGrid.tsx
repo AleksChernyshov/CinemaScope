@@ -1,5 +1,5 @@
-import { MovieCard } from '../MovieCard';
-import type { MoviesGridProps } from '../../types/pages.types';
+import { MovieCard } from "./MovieCard";
+import type { MoviesGridProps } from "../../types/movie.types";
 
 // Styling constants
 const STYLES = {
