@@ -107,5 +107,10 @@
       "birthday": "Set your birthday",
       "favoriteGenre": "Set your favorite genre"
     }
+  },
+  "movies": {
+    "noResults": "No Results Found",
+    "noResultsForQuery": "No results found for \"{{query}}\"",
+    "noMoviesAvailable": "No movies available at the moment"
   }
 } 
