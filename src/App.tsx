@@ -1,4 +1,4 @@
-import { createHashRouter, RouterProvider, ScrollRestoration, Outlet } from 'react-router-dom';
+import { createHashRouter, RouterProvider, Outlet } from 'react-router-dom';
 import { Header } from './components/Header';
 import { MobileNavigation } from './components/MobileNavigation';
 import { PopularPage } from './pages/PopularPage';
@@ -19,7 +19,6 @@ const Layout = () => {
       <MobileNavigation />
       <Outlet />
       <ScrollToTopButton />
-      <ScrollRestoration />
     </div>
   );
 };
