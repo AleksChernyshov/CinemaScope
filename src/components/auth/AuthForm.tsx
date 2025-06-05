@@ -60,7 +60,7 @@ export function AuthForm({ mode, onSuccess }: AuthFormProps) {
           id="username"
           label="auth.username"
           value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUsername(e.target.value)}
           placeholder={t('auth.username')}
         />
 
@@ -68,7 +68,7 @@ export function AuthForm({ mode, onSuccess }: AuthFormProps) {
           id="password"
           label="auth.password"
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
           type="password"
           placeholder="••••••••"
         />

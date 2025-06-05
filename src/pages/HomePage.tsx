@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { requestTrendingMovies } from '../api/tmdb';
-import { MovieGrid } from '../components/MovieGrid';
-import { LoadingState } from '../components/LoadingState';
-import { ErrorState } from '../components/ErrorState';
+import { MovieGrid } from '../components/movie/MovieGrid';
+import { LoadingState } from '../components/common/LoadingState';
+import { ErrorState } from '../components/common/ErrorState';
 import type { Movie } from '../types/movie';
 
 // Styling constants

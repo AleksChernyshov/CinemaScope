@@ -1,4 +1,4 @@
-import type { LoadingStateProps } from '../types/pages.types';
+import type { LoadingStateProps } from '../../types/pages.types';
 
 // Styling constants
 const STYLES = {

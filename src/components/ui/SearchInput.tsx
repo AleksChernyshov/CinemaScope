@@ -1,5 +1,5 @@
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
-import type { SearchInputProps } from '../types/search.types';
+import type { SearchInputProps } from '../../types/search.types';
 
 // Styling constants
 const STYLES = {

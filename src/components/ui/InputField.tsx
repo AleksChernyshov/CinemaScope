@@ -1,4 +1,4 @@
-import type { InputFieldProps } from '../types/auth.types';
+import type { InputFieldProps } from '../../types/auth.types';
 import { useTranslation } from 'react-i18next';
 
 // Reusable input field component with consistent styling

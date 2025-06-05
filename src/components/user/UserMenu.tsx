@@ -7,7 +7,6 @@ import { UserAvatar } from './UserAvatar';
 import { AuthenticatedMenu } from './AuthenticatedMenu';
 import { UnauthenticatedMenu } from './UnauthenticatedMenu';
 import type { AuthMode } from '../../types/menu.types';
-import { MenuButton } from '../ui/MenuButton';
 
 // Styling constants
 const STYLES = {

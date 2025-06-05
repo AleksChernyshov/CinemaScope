@@ -1,4 +1,4 @@
-import type { DefaultAvatarIconProps } from '../types/user.types';
+import type { DefaultAvatarIconProps } from '../../types/user.types';
 
 // Styling constants
 const STYLES = {

@@ -1,6 +1,6 @@
 import { Menu } from '@headlessui/react';
 import { Link } from 'react-router-dom';
-import type { MenuItemProps } from '../types/menu.types';
+import type { MenuItemProps } from '../../types/menu.types';
 
 // Styling constants
 const STYLES = {

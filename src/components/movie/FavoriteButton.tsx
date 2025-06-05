@@ -1,5 +1,4 @@
 import { StarIcon } from "../icons/StarIcon";
-import type { FavoriteButtonProps } from "../../types/movie.types";
 
 interface FavoriteButtonProps {
   isFavorited: boolean;

@@ -1,6 +1,6 @@
 import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import type { MenuButtonProps } from '../types/header.types';
+import type { MenuButtonProps } from '../../types/header.types';
 
 // Mobile menu button component
 export function MenuButton({ open }: MenuButtonProps) {

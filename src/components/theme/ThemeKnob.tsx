@@ -1,4 +1,4 @@
-import type { ThemeKnobProps } from '../types/theme.types';
+import type { ThemeKnobProps } from '../../types/theme.types';
 import { ThemeIcons } from './ThemeIcons';
 
 // Styling constants

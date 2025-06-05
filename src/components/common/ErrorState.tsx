@@ -1,4 +1,4 @@
-import type { ErrorStateProps } from '../types/pages.types';
+import type { ErrorStateProps } from '../../types/pages.types';
 
 // Styling constants
 const STYLES = {

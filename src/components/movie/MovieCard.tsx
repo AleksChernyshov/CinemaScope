@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../../contexts/AuthContext';
 import { useFavoritesStore } from '../../store/favoritesStore';
-import type { Movie } from '../../types/movie';
 import { ImagePlaceholder } from '../ui/ImagePlaceholder';
 import { AuthModal } from '../auth/AuthModal';
 import { FavoriteButton } from './FavoriteButton';

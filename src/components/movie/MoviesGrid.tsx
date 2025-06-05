@@ -1,5 +1,6 @@
 import { MovieCard } from "./MovieCard";
-import type { MoviesGridProps } from "../../types/movie.types";
+import type { MoviesGridProps } from "../../types/pages.types";
+import type { Movie } from "../../types/movie";
 
 // Styling constants
 const STYLES = {
@@ -9,7 +10,7 @@ const STYLES = {
 export function MoviesGrid({ movies, isLoading, lastElementRef }: MoviesGridProps) {
   return (
     <div className={STYLES.grid}>
-      {movies.map((movie, index) => (
+      {movies.map((movie: Movie, index: number) => (
         <div
           key={`movie-${movie.id}-${index}`}
           ref={index === movies.length - 1 ? lastElementRef : undefined}

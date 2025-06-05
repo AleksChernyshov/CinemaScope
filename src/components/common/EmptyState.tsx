@@ -1,4 +1,4 @@
-import type { EmptyStateProps } from '../types/pages.types';
+import type { EmptyStateProps } from '../../types/pages.types';
 
 // Styling constants
 const STYLES = {
