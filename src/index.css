@@ -78,6 +78,11 @@
   body {
     @apply bg-[var(--color-bg-primary)] text-[var(--color-text-primary)] transition-colors duration-200;
   }
+
+  .dark input {
+    background-color: var(--color-bg-primary);
+    border-color: rgba(147, 51, 234, 0.2);
+  }
 }
 
 @layer components {

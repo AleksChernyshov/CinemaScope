@@ -1,5 +1,6 @@
 import { createHashRouter, RouterProvider, ScrollRestoration, Outlet } from 'react-router-dom';
 import { Header } from './components/Header';
+import { MobileNavigation } from './components/MobileNavigation';
 import { PopularPage } from './pages/PopularPage';
 import { MoviePage } from './pages/MoviePage';
 import { MoviesPage } from './pages/MoviesPage';
@@ -15,6 +16,7 @@ const Layout = () => {
   return (
     <div className="min-h-screen bg-bg-primary text-text-primary">
       <Header />
+      <MobileNavigation />
       <Outlet />
       <ScrollToTopButton />
       <ScrollRestoration />

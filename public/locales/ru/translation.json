@@ -107,5 +107,10 @@
       "birthday": "Укажите дату рождения",
       "favoriteGenre": "Укажите любимый жанр"
     }
+  },
+  "movies": {
+    "noResults": "Ничего не найдено",
+    "noResultsForQuery": "Ничего не найдено по запросу \"{{query}}\"",
+    "noMoviesAvailable": "В данный момент фильмы недоступны"
   }
 } 

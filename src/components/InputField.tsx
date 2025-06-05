@@ -25,11 +25,14 @@ export function InputField({
         id={id}
         value={value}
         onChange={onChange}
-        className="w-full h-12 px-4 bg-bg-secondary/95 border border-purple-500/30 rounded-lg 
-                 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 
-                 transition-all duration-200 text-text-primary placeholder-text-secondary
-                 shadow-[0_0_10px_rgba(147,51,234,0.1)] focus:shadow-[0_0_15px_rgba(147,51,234,0.2)]
-                 font-bebas-neue text-xl tracking-wider leading-none flex items-center"
+        className="block w-full h-12 px-4 rounded-lg border-0 
+                 text-text-primary bg-bg-primary text-xl tracking-wider
+                 font-bebas-neue leading-none
+                 shadow-sm ring-1 ring-inset ring-purple-500/30 
+                 transition-all duration-200 outline-none
+                 placeholder:text-text-secondary 
+                 focus:ring-2 focus:ring-inset focus:ring-purple-500 
+                 focus:shadow-[0_0_10px_rgba(147,51,234,0.3)]"
         placeholder={placeholder}
         required
       />
