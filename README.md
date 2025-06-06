@@ -4,11 +4,9 @@ A modern, feature-rich movie discovery platform with a sleek UI that lets you ex
 
 🔗 **Demo**: https://alekschernyshov.github.io/CinemaScope/
 
-![CinemaScope Preview](public/assets/preview.png)
-
 ---
 
-## ✨ Features
+##  Features
 
 - **Movie & TV Show Discovery** powered by TMDb API
 - **Infinite Scroll** for seamless content loading
@@ -22,7 +20,7 @@ A modern, feature-rich movie discovery platform with a sleek UI that lets you ex
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 - **React** + **TypeScript** for robust development
 - **Tailwind CSS** for modern styling
@@ -35,7 +33,7 @@ A modern, feature-rich movie discovery platform with a sleek UI that lets you ex
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 1. **Clone the repo**
    ```bash
@@ -64,7 +62,7 @@ A modern, feature-rich movie discovery platform with a sleek UI that lets you ex
 
 ---
 
-## 📝 Environment Variables
+##  Environment Variables
 
 | Variable | Description |
 |----------|-------------|
@@ -74,18 +72,3 @@ To get a TMDb API key:
 1. Create an account at [themoviedb.org](https://www.themoviedb.org/)
 2. Go to your account settings
 3. Select the API section and follow the steps to get your API key
-
----
-
-## 🌐 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
