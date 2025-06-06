@@ -14,7 +14,7 @@ import { ScrollToTopButton } from './components/ui/ScrollToTopButton';
 
 const Layout = () => {
   return (
-    <div className="min-h-screen bg-bg-primary text-text-primary">
+    <div className="min-h-screen bg-bg-primary text-text-primary bg-[url('/assets/bg-light.png')] dark:bg-[url('/assets/bg-dark.png')] bg-cover bg-center bg-no-repeat bg-fixed">
       <Header />
       <MobileNavigation />
       <Outlet />

@@ -9,9 +9,9 @@ import type { ProfileAvatarProps } from '../../types/profile.types';
 // Styling constants
 const STYLES = {
   container: "relative group flex",
-  avatarWrapper: "size-24 sm:size-32 rounded-full ring-4 ring-bg-secondary shadow-xl overflow-hidden flex items-center justify-center",
+  avatarWrapper: "size-24 sm:size-32 rounded-full ring-4 ring-purple-500/30 backdrop-blur-xl shadow-xl overflow-hidden flex items-center justify-center transition-all duration-200 group-hover:ring-purple-500/70 group-hover:shadow-[0_0_20px_rgba(147,51,234,0.4)]",
   fileInput: "hidden",
-  overlay: (isHovering: boolean) => `absolute inset-0 flex items-center justify-center rounded-full bg-black/50 transition-opacity duration-200 cursor-pointer ${
+  overlay: (isHovering: boolean) => `absolute inset-0 flex items-center justify-center rounded-full bg-black/50 transition-opacity duration-200 cursor-pointer size-24 sm:size-32 ${
     isHovering ? 'opacity-100' : 'opacity-0'
   }`,
   overlayContent: "text-center",

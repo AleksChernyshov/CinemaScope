@@ -18,8 +18,8 @@ const STYLES = {
   page: "min-h-screen -mt-20",
   backdrop: {
     container: "h-[calc(384px+160px)] relative overflow-hidden",
-    image: "w-full h-full object-cover",
-    overlay: "absolute inset-0 bg-gradient-to-t from-bg-primary from-0% via-bg-primary/90 via-90% to-bg-primary/20 to-90%",
+    image: "w-full h-full object-cover [mask-image:linear-gradient(to_bottom,black_60%,rgba(0,0,0,0.95)_70%,rgba(0,0,0,0.9)_75%,rgba(0,0,0,0.8)_80%,rgba(0,0,0,0.6)_85%,rgba(0,0,0,0.4)_90%,rgba(0,0,0,0.1)_95%,transparent_98%)] [-webkit-mask-image:linear-gradient(to_bottom,black_60%,rgba(0,0,0,0.95)_70%,rgba(0,0,0,0.9)_75%,rgba(0,0,0,0.8)_80%,rgba(0,0,0,0.6)_85%,rgba(0,0,0,0.4)_90%,rgba(0,0,0,0.1)_95%,transparent_98%)]",
+    overlay: "",
     placeholder: "w-full h-full bg-bg-secondary/50"
   },
   content: {
@@ -86,7 +86,6 @@ export function MoviePage() {
                   alt={movie.title}
                   className={STYLES.backdrop.image}
                 />
-                <div className={STYLES.backdrop.overlay} />
               </>
             ) : (
               <div className={STYLES.backdrop.placeholder} />

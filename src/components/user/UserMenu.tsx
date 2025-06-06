@@ -13,11 +13,10 @@ const STYLES = {
   button: "relative flex rounded-full bg-bg-secondary/95 p-1.5 text-sm transition-all duration-200 hover:bg-purple-500/20 shadow-[0_0_10px_rgba(147,51,234,0.2)] hover:shadow-[0_0_15px_rgba(147,51,234,0.4)]",
   avatarContainer: "h-9 w-9 flex items-center justify-center",
   menuItems: (theme: 'dark' | 'light', isAuthenticated: boolean) => `
-    absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-xl backdrop-blur-md 
-    ${!isAuthenticated && 'py-2'} 
+    absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-xl backdrop-blur-md
     shadow-[0_5px_15px_-3px_rgba(0,0,0,0.2)] dark:shadow-[0_5px_15px_-3px_rgba(0,0,0,0.4)] 
-    ring-1 ring-purple-500/30 dark:ring-purple-500/50 focus:outline-none 
-    ${theme === 'dark' ? 'bg-neutral-900/95' : 'bg-zinc-50/95'}
+    ring-1 ring-purple-500/30 dark:ring-purple-500/50 focus:outline-none
+    ${theme === 'dark' ? 'bg-neutral-900/95' : 'bg-white/95'}
   `
 };
 

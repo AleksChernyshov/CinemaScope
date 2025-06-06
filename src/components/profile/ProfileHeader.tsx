@@ -5,12 +5,12 @@ import type { ProfileHeaderProps } from '../../types/profile.types';
 
 // Styling constants
 const STYLES = {
-  container: "relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 -mt-16",
+  container: "relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 -mt-20",
   content: "sm:flex sm:items-end sm:space-x-5",
   info: "mt-6 sm:flex sm:min-w-0 sm:flex-1 sm:items-center sm:justify-end sm:space-x-6 sm:pb-1",
   nameDesktop: "mt-6 min-w-0 flex-1 sm:hidden md:block",
   nameMobile: "mt-6 hidden min-w-0 flex-1 sm:block md:hidden",
-  name: "truncate text-2xl font-bold text-white",
+  name: "truncate text-2xl font-bold text-text-primary",
   buttons: "mt-6 flex flex-col justify-stretch space-y-3 sm:flex-row sm:space-x-4 sm:space-y-0",
   buttonGroup: "flex space-x-2",
   editButton: "nav-text inline-flex items-center justify-center rounded-md bg-purple-600 px-3 font-semibold text-white shadow-sm hover:bg-purple-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600 transition-colors duration-200 leading-none h-9",

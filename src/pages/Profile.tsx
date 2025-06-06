@@ -4,11 +4,11 @@ import { ProfileForm } from '../components/profile/ProfileForm';
 
 // Styling constants
 const STYLES = {
-  container: "bg-bg-primary",
+  container: "",
   background: {
     container: "relative h-72 -mt-16 overflow-hidden",
-    image: "h-full w-full object-cover",
-    overlay: "absolute inset-0 bg-gradient-to-t from-bg-primary"
+    image: "h-full w-full object-cover [mask-image:linear-gradient(to_bottom,black_60%,rgba(0,0,0,0.95)_70%,rgba(0,0,0,0.9)_75%,rgba(0,0,0,0.8)_80%,rgba(0,0,0,0.6)_85%,rgba(0,0,0,0.4)_90%,rgba(0,0,0,0.1)_95%,transparent_98%)] [-webkit-mask-image:linear-gradient(to_bottom,black_60%,rgba(0,0,0,0.95)_70%,rgba(0,0,0,0.9)_75%,rgba(0,0,0,0.8)_80%,rgba(0,0,0,0.6)_85%,rgba(0,0,0,0.4)_90%,rgba(0,0,0,0.1)_95%,transparent_98%)]",
+    overlay: ""
   }
 };
 
@@ -33,7 +33,6 @@ export default function Profile() {
             src={profile.backgroundImage}
             alt=""
           />
-          <div className={STYLES.background.overlay} />
         </div>
       </div>
 
