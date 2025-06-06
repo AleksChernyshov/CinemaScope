@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { requestCredits } from '../../api/tmdb';
 import { CastCard } from './CastCard';
+import { Spinner } from '../common/Spinner';
 import type { CastMember, CastSectionProps } from '../../types/cast.types';
 
 // Main component for displaying movie/TV show cast section
@@ -33,7 +34,12 @@ export function CastSection({ movieId, type }: CastSectionProps) {
 
   // Loading state
   if (isLoading) {
-    return <div className="text-text-secondary">{t('loading.cast')}</div>;
+    return (
+      <div className="flex flex-col items-center gap-2">
+        <Spinner size="lg" />
+        <span className="font-bebas-neue text-2xl text-text-secondary">{t('loading.cast')}</span>
+      </div>
+    );
   }
 
   // Error state

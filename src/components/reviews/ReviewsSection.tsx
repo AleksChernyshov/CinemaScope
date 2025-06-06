@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { requestReviews } from '../../api/tmdb';
 import { ReviewCard } from './ReviewCard';
+import { Spinner } from '../common/Spinner';
 import type { Review, ReviewsSectionProps } from '../../types/review.types';
 
 // Styling constants
@@ -43,7 +44,12 @@ export function ReviewsSection({ movieId, type }: ReviewsSectionProps) {
 
   // Loading state
   if (isLoading) {
-    return <div className={STYLES.message}>{t('loading.reviews')}</div>;
+    return (
+      <div className="flex flex-col items-center gap-2">
+        <Spinner size="lg" />
+        <span className="font-bebas-neue text-2xl text-text-secondary">{t('loading.reviews')}</span>
+      </div>
+    );
   }
 
   // Error state

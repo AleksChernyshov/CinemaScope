@@ -1,14 +1,11 @@
 import type { MoviesLoadingStateProps } from '../../types/pages.types';
-
-// Styling constants
-const STYLES = {
-  container: "text-center text-text-secondary mt-8"
-};
+import { Spinner } from '../common/Spinner';
 
 export function MoviesLoadingState({ message }: MoviesLoadingStateProps) {
   return (
-    <div className={STYLES.container}>
-      {message}
+    <div className="flex flex-col items-center gap-4 mt-8">
+      <Spinner size="lg" />
+      <span className="font-bebas-neue text-2xl text-text-secondary">{message}</span>
     </div>
   );
 } 

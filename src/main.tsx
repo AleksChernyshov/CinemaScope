@@ -4,13 +4,14 @@ import { App } from './App'
 import './index.css'
 import './i18n/config'
 import { ThemeProvider } from './contexts/ThemeContext'
+import { InitialLoadingLayout } from './components/layout/InitialLoadingLayout'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Suspense fallback="Loading...">
-      <ThemeProvider>
+    <ThemeProvider>
+      <Suspense fallback={<InitialLoadingLayout />}>
         <App />
-      </ThemeProvider>
-    </Suspense>
+      </Suspense>
+    </ThemeProvider>
   </React.StrictMode>,
 )
