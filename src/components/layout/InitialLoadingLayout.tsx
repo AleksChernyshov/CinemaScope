@@ -11,7 +11,7 @@ const STYLES = {
 
 export function InitialLoadingLayout() {
   return (
-    <div className="min-h-screen bg-bg-primary text-text-primary">
+    <div className="min-h-screen bg-bg-primary text-text-primary bg-[url('/assets/bg-light.png')] dark:bg-[url('/assets/bg-dark.png')] bg-cover bg-center bg-no-repeat bg-fixed">
       {/* Header */}
       <nav className={STYLES.nav}>
         <div className={STYLES.container}>

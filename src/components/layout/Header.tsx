@@ -8,10 +8,10 @@ import { Navigation } from './Navigation';
 // Styling constants
 const HEADER_STYLES = {
   nav: "bg-bg-secondary/95 backdrop-blur-md sticky top-0 z-50 rounded-b-xl shadow-header",
-  container: "container mx-auto px-4",
-  wrapper: "relative flex h-16 sm:h-20 justify-between items-center",
-  controls: "flex items-center gap-2 sm:gap-3",
-  logo: "h-12 sm:h-16 w-auto",
+  container: "container mx-auto px-2 sm:px-4",
+  wrapper: "relative flex h-14 sm:h-16 lg:h-20 justify-between items-center gap-2 sm:gap-4",
+  controls: "flex items-center gap-1.5 sm:gap-2 lg:gap-3",
+  logo: "h-8 sm:h-12 lg:h-16 w-auto",
   desktopNav: "hidden lg:flex lg:items-center lg:justify-center absolute left-1/2 -translate-x-1/2"
 };
 

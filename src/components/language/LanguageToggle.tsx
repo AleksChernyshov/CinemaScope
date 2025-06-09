@@ -7,7 +7,7 @@ import { LanguageItem } from './LanguageItem';
 
 // Styling constants
 const STYLES = {
-  button: "relative flex items-center justify-center rounded-full bg-bg-secondary/95 px-3 py-2 text-sm transition-all duration-200 hover:bg-purple-500/20 border-2 border-purple-500/50 hover:border-purple-500/70 shadow-[0_0_10px_rgba(147,51,234,0.4)] hover:shadow-[0_0_15px_rgba(147,51,234,0.5)]",
+  button: "relative flex items-center justify-center rounded-full bg-bg-secondary/95 px-2 sm:px-3 py-1.5 sm:py-2 text-sm transition-all duration-200 hover:bg-purple-500/20 border-2 border-purple-500/50 hover:border-purple-500/70 shadow-[0_0_10px_rgba(147,51,234,0.4)] hover:shadow-[0_0_15px_rgba(147,51,234,0.5)]",
   menu: {
     light: "bg-white/90",
     dark: "bg-neutral-900/90",

@@ -6,9 +6,9 @@ export function UnauthenticatedMenu({ onLogin, onRegister }: UnauthenticatedMenu
   const { t } = useTranslation();
 
   return (
-    <>
+    <div className="py-2">
       <MenuItem onClick={onLogin}>{t('auth.login')}</MenuItem>
       <MenuItem onClick={onRegister}>{t('auth.register')}</MenuItem>
-    </>
+    </div>
   );
 } 

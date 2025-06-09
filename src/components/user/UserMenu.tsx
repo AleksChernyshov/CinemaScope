@@ -10,8 +10,8 @@ import type { AuthMode } from '../../types/menu.types';
 
 // Styling constants
 const STYLES = {
-  button: "relative flex rounded-full bg-bg-secondary/95 p-1.5 text-sm transition-all duration-200 hover:bg-purple-500/20 shadow-[0_0_10px_rgba(147,51,234,0.2)] hover:shadow-[0_0_15px_rgba(147,51,234,0.4)]",
-  avatarContainer: "h-9 w-9 flex items-center justify-center",
+  button: "relative flex rounded-full bg-bg-secondary/95 p-1 sm:p-1.5 text-sm transition-all duration-200 hover:bg-purple-500/20 shadow-[0_0_10px_rgba(147,51,234,0.2)] hover:shadow-[0_0_15px_rgba(147,51,234,0.4)]",
+  avatarContainer: "h-7 w-7 sm:h-9 sm:w-9 flex items-center justify-center",
   menuItems: (theme: 'dark' | 'light', isAuthenticated: boolean) => `
     absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-xl backdrop-blur-md
     shadow-[0_5px_15px_-3px_rgba(0,0,0,0.2)] dark:shadow-[0_5px_15px_-3px_rgba(0,0,0,0.4)] 
